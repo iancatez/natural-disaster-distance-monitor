@@ -2,7 +2,7 @@
 
 > **Track hurricanes, tornadoes, and wildfires near any location in real-time.**
 
-A CLI tool that queries public government APIs (NOAA, WFIGS) to find active natural disasters within a specified radius of your location.
+A CLI tool that queries public government APIs (NOAA, WFIGS) to find active natural disasters within a specified radius of a given location.
 
 ![CLI Screenshot](cli_screenshot.png)
 
