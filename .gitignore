@@ -1,0 +1,30 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.env
+
+# Rust
+rust/target/
+Cargo.lock
+
+# IDE
+.cursor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output files
+*.json
+!shared/data/*.json
+cyclones.py
+tornadoes.py
+wildfires.py
+IMPLEMENTATION_PLAN.md
