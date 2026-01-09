@@ -7,11 +7,25 @@
 
 ## 🚧 In Progress
 
-_None currently_
+| Feature | Scope | Branch | Notes |
+|---------|-------|--------|-------|
+| Interactive CLI | python/cli | feature/interactive-cli | Arrow-key menus, colored output, ASCII art |
 
 ---
 
 ## 📋 Backlog
+
+### Interactive CLI (Phase D)
+
+- [ ] **[python/cli]** P1: Create interactive mode (no args required)
+- [ ] **[python/cli]** P1: Add ASCII art banner on startup
+- [ ] **[python/cli]** P1: Add colored terminal output (rich/colorama)
+- [ ] **[python/cli]** P1: Add arrow-key menu navigation (questionary)
+- [ ] **[python/cli]** P1: Add coordinate input with format validation
+- [ ] **[python/cli]** P2: Add disaster type multi-select menu
+- [ ] **[python/cli]** P2: Add radius selection menu
+- [ ] **[python/cli]** P2: Add "query again" loop option
+- [ ] **[python/cli]** P3: Add loading spinners during API calls
 
 ### Rust Implementation (Phase C - Future)
 
@@ -27,7 +41,6 @@ _None currently_
 
 - [ ] **[all]** P3: Add caching for API responses
 - [ ] **[all]** P3: Add rate limiting protection
-- [ ] **[python/cli]** P3: Add rich console output
 - [ ] **[docs]** P3: Create API documentation
 - [ ] **[test]** P2: Add unit tests for distance calculations
 - [ ] **[test]** P2: Add integration tests with mocked APIs
