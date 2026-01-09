@@ -7,25 +7,11 @@
 
 ## 🚧 In Progress
 
-| Feature | Scope | Branch | Notes |
-|---------|-------|--------|-------|
-| Interactive CLI | python/cli | feature/interactive-cli | Arrow-key menus, colored output, ASCII art |
+_None currently_
 
 ---
 
 ## 📋 Backlog
-
-### Interactive CLI (Phase D)
-
-- [ ] **[python/cli]** P1: Create interactive mode (no args required)
-- [ ] **[python/cli]** P1: Add ASCII art banner on startup
-- [ ] **[python/cli]** P1: Add colored terminal output (rich/colorama)
-- [ ] **[python/cli]** P1: Add arrow-key menu navigation (questionary)
-- [ ] **[python/cli]** P1: Add coordinate input with format validation
-- [ ] **[python/cli]** P2: Add disaster type multi-select menu
-- [ ] **[python/cli]** P2: Add radius selection menu
-- [ ] **[python/cli]** P2: Add "query again" loop option
-- [ ] **[python/cli]** P3: Add loading spinners during API calls
 
 ### Rust Implementation (Phase C - Future)
 
@@ -48,6 +34,18 @@
 ---
 
 ## ✅ Completed
+
+### Phase D - Interactive CLI (Jan 2026)
+
+- [x] **[python/cli]** Create interactive mode (no args required) ✓
+- [x] **[python/cli]** Add ASCII art banner on startup ✓
+- [x] **[python/cli]** Add colored terminal output (rich) ✓
+- [x] **[python/cli]** Add arrow-key menu navigation (questionary) ✓
+- [x] **[python/cli]** Add coordinate input with format validation ✓
+- [x] **[python/cli]** Add disaster type multi-select menu ✓
+- [x] **[python/cli]** Add radius selection menu ✓
+- [x] **[python/cli]** Add "query again" loop option ✓
+- [x] **[python/cli]** Add loading spinners during API calls ✓
 
 ### Phase B - Python Implementation (Jan 2026)
 
