@@ -4,7 +4,7 @@
 
 A CLI tool that queries public government APIs (NOAA, WFIGS) to find active natural disasters within a specified radius of your location.
 
-![CLI Screenshot](CLI%20Screenshot.png)
+![CLI Screenshot](cli_screenshot.png)
 
 ## Features
 
