@@ -285,11 +285,18 @@ def _calculate_distance_to_fire(
             # No polygon geometry, return infinity
             return float('inf'), False
         
-        # Check all rings (outer boundary and any inner rings)
-        inside = False
+        # In ArcGIS geometry:
+        # - rings[0] is the outer boundary
+        # - rings[1:] are interior rings (holes - unburned areas)
+        # A point is inside the fire perimeter if:
+        # - It IS inside the outer boundary (rings[0])
+        # - It is NOT inside any hole ring (rings[1:])
+        
+        inside_outer = False
+        inside_hole = False
         min_distance = float('inf')
         
-        for ring in rings:
+        for i, ring in enumerate(rings):
             if not ring:
                 continue
                 
@@ -306,7 +313,12 @@ def _calculate_distance_to_fire(
             )
             
             if ring_inside[0]:
-                inside = True
+                if i == 0:
+                    # Inside outer boundary
+                    inside_outer = True
+                else:
+                    # Inside a hole (unburned area)
+                    inside_hole = True
             
             # Calculate minimum distance to ring boundary
             distances = haversine_vectorized(
@@ -318,6 +330,10 @@ def _calculate_distance_to_fire(
             
             ring_min_distance = float(np.min(distances))
             min_distance = min(min_distance, ring_min_distance)
+        
+        # Point is inside fire perimeter only if inside outer boundary
+        # AND not inside any hole
+        inside = inside_outer and not inside_hole
         
         if inside:
             return 0.0, True

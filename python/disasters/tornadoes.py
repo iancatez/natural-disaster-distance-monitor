@@ -189,8 +189,8 @@ def get_tornadoes_near_location(
                 max_wind_mph=float(attrs.get('maxwind')) if attrs.get('maxwind') and attrs.get('maxwind') > 0 else None,
                 path_length_miles=float(attrs.get('length')) if attrs.get('length') and attrs.get('length') > 0 else None,
                 path_width_yards=float(attrs.get('width')) if attrs.get('width') and attrs.get('width') > 0 else None,
-                fatalities=int(attrs.get('fatalities', 0)) if attrs.get('fatalities') else None,
-                injuries=int(attrs.get('injuries', 0)) if attrs.get('injuries') else None,
+                fatalities=int(attrs.get('fatalities')) if attrs.get('fatalities') is not None else None,
+                injuries=int(attrs.get('injuries')) if attrs.get('injuries') is not None else None,
                 storm_date=storm_date,
                 last_updated=datetime.now(),
                 details={
