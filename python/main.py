@@ -5,6 +5,9 @@ Natural Disaster Distance Monitor - CLI Interface
 Find hurricanes, tornadoes, and wildfires near any location.
 
 Usage Examples:
+    # Interactive mode (no arguments)
+    python main.py
+    
     # Single location query
     python main.py --lat 29.7604 --lon -95.3698
     python main.py --lat 29.7604 --lon -95.3698 --name "Houston TX"
@@ -41,14 +44,32 @@ from disasters import (
 
 def main():
     """Main entry point for the CLI."""
+    # If no arguments provided, launch interactive mode
+    if len(sys.argv) == 1:
+        try:
+            from interactive import main as interactive_main
+            interactive_main()
+            return
+        except ImportError as e:
+            print("Interactive mode requires 'rich' and 'questionary' packages.")
+            print("Install with: pip install rich questionary")
+            print(f"\nError: {e}")
+            sys.exit(1)
+    
     parser = argparse.ArgumentParser(
         description='Find natural disasters near a location',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__
     )
     
+    # Interactive mode flag
+    parser.add_argument(
+        '--interactive', '-i', action='store_true',
+        help='Launch interactive mode with menus and prompts'
+    )
+    
     # Location input options (mutually exclusive)
-    location_group = parser.add_mutually_exclusive_group(required=True)
+    location_group = parser.add_mutually_exclusive_group(required=False)
     location_group.add_argument(
         '--csv', type=str, metavar='FILE',
         help='CSV file with locations (columns: name, latitude, longitude)'
@@ -97,6 +118,21 @@ def main():
     )
     
     args = parser.parse_args()
+    
+    # Handle interactive mode flag
+    if args.interactive:
+        try:
+            from interactive import main as interactive_main
+            interactive_main()
+            return
+        except ImportError as e:
+            print("Interactive mode requires 'rich' and 'questionary' packages.")
+            print("Install with: pip install rich questionary")
+            sys.exit(1)
+    
+    # Require either --lat or --csv if not interactive
+    if args.lat is None and args.csv is None:
+        parser.error('Either --lat/--lon or --csv is required (or use --interactive)')
     
     # Validate lat/lon pair
     if args.lat is not None and args.lon is None:
