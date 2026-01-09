@@ -7,43 +7,11 @@
 
 ## 🚧 In Progress
 
-| Feature | Scope | Branch | Notes |
-|---------|-------|--------|-------|
-| Project restructuring for multi-language | setup | - | Phase A complete |
+_None currently_
 
 ---
 
 ## 📋 Backlog
-
-### Python Implementation (Phase B)
-
-- [ ] **[python/utils]** P1: Extract haversine_vectorized from existing code
-- [ ] **[python/utils]** P1: Extract is_point_in_polygon_vectorized
-- [ ] **[python/utils]** P1: Extract HTTP retry session logic
-- [ ] **[python/utils]** P2: Add coordinate validation helpers
-- [ ] **[python/utils]** P2: Add CSV loading utility
-- [ ] **[python/models]** P1: Create DisasterType enum
-- [ ] **[python/models]** P1: Create Location dataclass
-- [ ] **[python/models]** P1: Create DisasterResult base class
-- [ ] **[python/models]** P1: Create HurricaneResult class
-- [ ] **[python/models]** P1: Create TornadoResult class
-- [ ] **[python/models]** P1: Create WildfireResult class
-- [ ] **[python/models]** P2: Create severity enums
-- [ ] **[python/hurricanes]** P1: Create fetch_active_hurricanes()
-- [ ] **[python/hurricanes]** P1: Create get_hurricanes_near_location()
-- [ ] **[python/hurricanes]** P2: Add cone distance calculation
-- [ ] **[python/tornadoes]** P1: Create fetch_recent_tornadoes()
-- [ ] **[python/tornadoes]** P1: Create get_tornadoes_near_location()
-- [ ] **[python/wildfires]** P1: Create fetch_active_wildfires()
-- [ ] **[python/wildfires]** P1: Create get_wildfires_near_location()
-- [ ] **[python/wildfires]** P2: Add perimeter distance calculation
-- [ ] **[python/cli]** P1: Create main.py CLI entry point
-- [ ] **[python/cli]** P1: Support --lat/--lon arguments
-- [ ] **[python/cli]** P1: Support --csv argument
-- [ ] **[python/cli]** P2: Support --json output
-- [ ] **[python/cli]** P2: Support --type filtering
-- [ ] **[python/cli]** P3: Add progress indicators
-- [ ] **[python]** P1: Create unified get_nearby_disasters() interface
 
 ### Rust Implementation (Phase C - Future)
 
@@ -67,6 +35,35 @@
 ---
 
 ## ✅ Completed
+
+### Phase B - Python Implementation (Jan 2026)
+
+- [x] **[python/utils]** Extract haversine_vectorized from existing code ✓
+- [x] **[python/utils]** Extract is_point_in_polygon_vectorized ✓
+- [x] **[python/utils]** Extract HTTP retry session logic ✓
+- [x] **[python/utils]** Add coordinate validation helpers ✓
+- [x] **[python/utils]** Add CSV loading utility ✓
+- [x] **[python/models]** Create DisasterType enum ✓
+- [x] **[python/models]** Create Location dataclass ✓
+- [x] **[python/models]** Create DisasterResult base class ✓
+- [x] **[python/models]** Create HurricaneResult class ✓
+- [x] **[python/models]** Create TornadoResult class ✓
+- [x] **[python/models]** Create WildfireResult class ✓
+- [x] **[python/models]** Create severity enums ✓
+- [x] **[python/hurricanes]** Create fetch_active_hurricanes() ✓
+- [x] **[python/hurricanes]** Create get_hurricanes_near_location() ✓
+- [x] **[python/hurricanes]** Add cone distance calculation ✓
+- [x] **[python/tornadoes]** Create fetch_recent_tornadoes() ✓
+- [x] **[python/tornadoes]** Create get_tornadoes_near_location() ✓
+- [x] **[python/wildfires]** Create fetch_active_wildfires() ✓
+- [x] **[python/wildfires]** Create get_wildfires_near_location() ✓
+- [x] **[python/wildfires]** Add perimeter distance calculation ✓
+- [x] **[python/cli]** Create main.py CLI entry point ✓
+- [x] **[python/cli]** Support --lat/--lon arguments ✓
+- [x] **[python/cli]** Support --csv argument ✓
+- [x] **[python/cli]** Support --json output ✓
+- [x] **[python/cli]** Support --type filtering ✓
+- [x] **[python]** Create unified get_nearby_disasters() interface ✓
 
 ### Phase A - Project Setup (Jan 2026)
 
