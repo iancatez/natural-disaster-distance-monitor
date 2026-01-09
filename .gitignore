@@ -24,7 +24,7 @@ Thumbs.db
 # Output files
 *.json
 !shared/data/*.json
-cyclones.py
-tornadoes.py
-wildfires.py
+/cyclones.py
+/tornadoes.py
+/wildfires.py
 IMPLEMENTATION_PLAN.md
