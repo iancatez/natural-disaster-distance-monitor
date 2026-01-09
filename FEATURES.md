@@ -27,7 +27,6 @@ _None currently_
 
 - [ ] **[all]** P3: Add caching for API responses
 - [ ] **[all]** P3: Add rate limiting protection
-- [ ] **[python/cli]** P3: Add rich console output
 - [ ] **[docs]** P3: Create API documentation
 - [ ] **[test]** P2: Add unit tests for distance calculations
 - [ ] **[test]** P2: Add integration tests with mocked APIs
@@ -35,6 +34,18 @@ _None currently_
 ---
 
 ## ✅ Completed
+
+### Phase D - Interactive CLI (Jan 2026)
+
+- [x] **[python/cli]** Create interactive mode (no args required) ✓
+- [x] **[python/cli]** Add ASCII art banner on startup ✓
+- [x] **[python/cli]** Add colored terminal output (rich) ✓
+- [x] **[python/cli]** Add arrow-key menu navigation (questionary) ✓
+- [x] **[python/cli]** Add coordinate input with format validation ✓
+- [x] **[python/cli]** Add disaster type multi-select menu ✓
+- [x] **[python/cli]** Add radius selection menu ✓
+- [x] **[python/cli]** Add "query again" loop option ✓
+- [x] **[python/cli]** Add loading spinners during API calls ✓
 
 ### Phase B - Python Implementation (Jan 2026)
 
